@@ -12,9 +12,8 @@ export default Ember.Controller.extend({
     ],
     actions: {
         showInfo(name) {
-            var personalInfo = document.querySelector('#personal-information');
+            var personalInfo = document.querySelector('#list-data .personal-information');
             personalInfo.innerHTML = name;
-            console.log('clicked data',name);
         }
     }
 });

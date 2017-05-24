@@ -1,21 +1,64 @@
-* {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
-#personal-information {
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    height:100%;
+}
+
+#sidebar {
+    background-color: #efefef;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    flex: 1;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+#sidebar ul {
+    padding: 0;
+    margin: 0;
+    height:100%;
+    list-style-type: none;
+}
+#sidebar ul li {
+    margin: 0;
+}
+#sidebar ul li a {
+    text-decoration: none;
+    padding:5px;
+}
+#sidebar ul li a:hover {
+    background-color: #dfdfdf;
+}
+
+#list-data {
+    -webkit-flex: 5;
+    -moz-flex: 5;
+    flex: 5;
+}
+
+#list-data .personal-information {
     border: 1px solid #afafaf;
     height: 50px;
     margin: 4px;
     padding: 5px;
 }
 
-.people {
+#list-data .people {
     list-style-type: none;
     padding: 0;
     margin: 0;
     width: 100%;
 }
-.people li {
+#list-data .people li {
     border: 1px solid #afafaf;
     padding: 5px;
     margin: 3px;
@@ -25,7 +68,7 @@
     width:29%;
     display: inline-block;
 }
-.people li:hover {
+#list-data .people li:hover {
     background-color: #efefef;
     cursor: pointer;
 }
