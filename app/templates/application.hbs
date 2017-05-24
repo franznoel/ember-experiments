@@ -1,0 +1,11 @@
+<div class="container">
+    <nav id="sidebar">
+        <ul>
+            <li class="title"><h3>Pages</h3></li>
+            {{#each pages as | page | }}
+            <li>{{#link-to page.route }}List Data{{/link-to}}</li>
+            {{/each}}
+        </ul>
+    </nav>
+    {{outlet}}
+</div>
