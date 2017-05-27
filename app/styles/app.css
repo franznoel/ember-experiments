@@ -9,9 +9,11 @@ body {
     margin: 0;
 }
 
-#container {
+.container-fluid {
     height: 100%;
     float: left;
+    padding: 0;
+    margin: 0;
 }
 
 #sidebar {
@@ -20,7 +22,7 @@ body {
     -moz-flex: 1;
     flex: 1;
     height: 980px;
-    width: 10%;
+    width: 20%;
     float: left;
     padding: 0;
     margin: 0;
@@ -55,7 +57,7 @@ body {
     -webkit-flex: 5;
     -moz-flex: 5;
     flex: 5;
-    width: 90%;
+    width: 80%;
     float: left;
     padding: 20px;
 }
@@ -66,24 +68,7 @@ body {
     margin: 4px;
     padding: 5px;
 }
-
-#list-data .people {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-#list-data .people li {
-    border: 1px solid #afafaf;
-    padding: 5px;
-    margin: 3px;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    width:29%;
-    display: inline-block;
-}
-#list-data .people li:hover {
+#list-data .people:hover {
     background-color: #efefef;
     cursor: pointer;
 }

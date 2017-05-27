@@ -1,10 +1,12 @@
 <div id="list-data">
     <h2>List Data</h2>
-    <div class="personal-information"></div>
-    <ul class="people">
-        {{#each people as | person | }}
-        <li {{action "showInfo" person.name}}>{{person.name}}</li>
-        {{/each}}
-    </ul>
+    <div class="well personal-information"></div>
+    {{#each people as | person | }}
+    <div class="col-md-4">
+        <div class="panel panel-default people">
+            <div class="panel-body" {{action "showInfo" person.name}}>{{person.name}}</div>
+        </div>
+    </div>
+    {{/each}}
     {{outlet}}
 </div>
