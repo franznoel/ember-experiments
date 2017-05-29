@@ -1,0 +1,7 @@
+<h3>Students (Closure)</h3>
+{{student-list onRemove=(action 'removeController') onReset=(action 'resetController')}}
+{{#each model as |student| }}
+    {{student}}<br/>
+{{/each}}
+
+{{outlet}}
