@@ -1,0 +1,12 @@
+<form {{action "doLogin" on="submit"}}>
+    <div class="form-group">
+        <label for="email">Email</label>
+        {{input type="text" name="email" class="form-control" valueBinding=email placeholder="Email" required="required"}}
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        {{input type="password" name="password" class="form-control" valueBinding=password placeholder="Password" required="required"}}
+    </div>
+    <button class="btn btn-primary">Login</button>
+</form>
+{{yield}}
