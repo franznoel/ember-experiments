@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('student-list', 'Integration | Component | student list', {
+moduleForComponent('login-form', 'Integration | Component | login form', {
   integration: true
 });
 
@@ -10,16 +10,17 @@ test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{student-list}}`);
+  this.render(hbs`{{login-form}}`);
+  assert.equal(this.$('input:eq(0)').attr('name'),'email','has Email');
+  assert.equal(this.$('input:eq(1)').attr('name'),'password','has Password');
 
-  assert.equal(this.$('button:eq(0)').text().trim(), 'Remove', 'has Remove');
-  assert.equal(this.$('button:eq(1)').text().trim(), 'Reset','has Reset');
+  // assert.equal(this.$().text().trim(), '');
 
   // Template block usage:
   // this.render(hbs`
-  //   {{#student-list}}
+  //   {{#login-form}}
   //     template block text
-  //   {{/student-list}}
+  //   {{/login-form}}
   // `);
 
   // assert.equal(this.$().text().trim(), 'template block text');
