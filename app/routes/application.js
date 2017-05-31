@@ -4,10 +4,26 @@ import firebase from 'npm:firebase';
 export default Ember.Route.extend({
     statusMessage: null,
     loggedIn: false,
+    user: null,
 
     init() {
-        // Check if somebody is logged in.
-        console.log('Demo');
+        // Get the current user
+        // this.setCurrentUser();
+    },
+
+    setCurrentUser() {
+        var self = this;
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                self.user = user;
+                console.log('User: ', user);
+            } else {
+                console.log('No user signed in.');
+                self.transitionTo('login');
+            }
+        });
+
+        this.user = self.user;
     },
 
     authenticate(creds) {
