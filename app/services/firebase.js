@@ -6,9 +6,9 @@ export default Ember.Service.extend({
     init() {
         firebase.initializeApp({
           apiKey: 'AIzaSyD_4kMXyAtD48K_afBrkd1-LTF73w3LLp8',
-          authDomain: 'ember-experiments.firebaseapp.com',
-          databaseURL: 'https://ember-experiments.firebaseio.com',
-          storageBucket: 'ember-experiments.appspot.com',
+          authDomain: 'ember-experiments-ff56b.firebaseapp.com',
+          databaseURL: 'https://ember-experiments-ff56b.firebaseio.com',
+          storageBucket: 'ember-experiments-ff56b.appspot.com',
           messagingSenderId: '6104397927'
         });
         this.firebase = firebase;
