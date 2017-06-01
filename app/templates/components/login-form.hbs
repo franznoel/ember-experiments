@@ -1,5 +1,6 @@
 {{#unless loggedIn}}
 <form {{action "doLogin" on="submit"}}>
+    <p>Use `admin@example.com` and `password` for successful credentials.</p>
     <div class="form-group">
         <label for="email">Email</label>
         {{input type="text" name="email" class="form-control" valueBinding=email placeholder="Email" required="required"}}
